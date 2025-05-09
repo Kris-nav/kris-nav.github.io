@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>K&P Visual Photography</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="scripts/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/pop-ups.js"></script>
+<script type="text/javascript" src="scripts/nav.js"></script>
+</head>
+<body>
+<hgroup>
+  <h1>K&P Visual Photography</h1>
+  <h4>Senior Dev: <a href="http://www.facebook.com" target="_blank">Phoenix Molleno</a></h4>
+  <h4>Co Founder: <a href="http://www.facebook.com" target="_blank">Kristoferson Navarro</a></h4>
+</hgroup>
+<nav>
+  <ul id="menu" class="menu">
+    <li> <a href="#" id="about"> <img src="images/1_menu.jpg"  alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">About Us</span> <span class="descr">Know Us</span> </span> </a> </li>
+    <li> <a href="#" id="projects"> <img src="images/2_menu.jpg" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Products</span> <span class="descr">Our Packages</span> </span> </a> </li>
+    <li> <a href="#" id="contact"> <img src="images/3_menu.jpg" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Contact</span> <span class="descr">Get In Touch</span> </span> </a> </li>
+    <li > <a href="#" id="blog"> <img src="images/1_menu.jpg" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Blog</span> <span class="descr">Our Musings</span> </span> </a> </li>
+  </ul>
+</nav>
+<section id="bg">
+  <section id="overlay"></section>
+  <a href="#" class="nextImageBtn" title="next"></a><a href="#" class="prevImageBtn" title="previous"></a><img src="images/gallery/1.jpg" alt="Title of this pic" title="   " id="bgimg" /></section>
+<div id="preloader"><img src="images/ajax-loader_dark.gif" width="32" height="32" alt="" /></div>
+<div id="img_title"></div>
+<div id="toolbar"><a href="#" title="Maximize" onClick="ImageViewMode('full');return false"><img src="images/toolbar_fs_icon.png" width="50" height="50" alt="" /></a></div>
+<div id="thumbnails_wrapper">
+  <div id="outer_container">
+    <div class="thumbScroller">
+      <div class="container">
+        <div class="content">
+          <div><a href="images/gallery/1.jpg"><img src="images/gallery/1_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="" alt="Tie of this pic" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/2.jpg"><img src="images/gallery/2_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="" alt="Second Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/3.jpg"><img src="images/gallery/3_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="" alt="Trd Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/4.jpg"><img src="images/gallery/4_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="" alt="Fourth Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/5.jpg"><img src="images/gallery/5_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="" alt="Fifth Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/6.jpg"><img src="images/gallery/6_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Sixth Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/1.jpg"><img src="images/gallery/1_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title="   " alt="Title of this pic" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/2.jpg"><img src="images/gallery/2_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Second Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/3.jpg"><img src="images/gallery/3_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Third Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/4.jpg"><img src="images/gallery/4_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Fourth Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/5.jpg"><img src="images/gallery/5_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Fifth Title" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+          <div><a href="images/gallery/6.jpg"><img src="images/gallery/6_thumb.jpg" style="width:207px; height:138px; object-fit:cover; display:block;" title=" " alt="Sixth Title" class="thumb" /></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<article id="popupAbout" class="popupAbout">
+  <div class="customScrollBox">
+    <div class="container">
+      <div class="content"> <a id="popupAboutClose"><img src="images/cross.png" width="20" alt="" /></a>
+        <h1>About Us:</h1>
+        <p><img src="images/photo.jpg" alt="" class="image" alt="us" style="width:190px; height:190px; object-fit:cover; display:block;"/> At K&P Visual Photography, we believe every story deserves to be told beautifully. Based in the Philippines, we offer affordable and professional photography and videography services for weddings, birthdays, events, and special occasions. K&P Visual started with a shared passion for storytelling through the lens. With years of experience and a creative eye, we set out to make professional photography accessible without compromising quality. Whether it’s a once-in-a-lifetime wedding or a simple family gathering, our mission is to capture moments that matter. We value authenticity, emotion, and connection. That’s why our style leans into natural light, real expressions, and unposed beauty—so your memories feel just as real years from now as they did in the moment. Every frame we take is crafted with care and heart.</p>
+      </div>
+    </div>
+    <div class="dragger_container">
+      <div class="dragger"></div>
+    </div>
+    <a class="scrollUpBtn" href="#"></a> <a class="scrollDownBtn" href="#"></a> </div>
+</article>
+<article id="popupProjects" class="popupProjects">
+  <div class="customScrollBox">
+    <div class="container">
+      <div class="content"> <a id="popupProjectsClose"><img src="images/cross.png" width="20" alt="" /></a>
+        <h1>Packages: </h1>
+        <h2>We Can Provide The Following:</h2>
+        <p class="nomargin">
+          <b>Package 1</b><br/>
+          <b><i>Solo Sessions</i></b><br/>
+Perfect for graduation photos, modeling portfolios, creative shoots, or personal branding.<br/>
+What's included:<br/>
+✅ 1-hour guided photo session<br/>
+✅ 10 fully edited photos (soft copy)<br/>
+✅ Online delivery via Google Drive<br/>
+✅ 1 outfit change (optional)<br/>
+Optional: Add ₱1,000 for a 12x18 framed print delivered to your doorstep<br/>
+Rates: ₱1,000 – ₱3,000<br/>
+Studio or outdoor setup available (travel fees may apply)<br/>
+<div class="border"></div>
+        </p>
+        <p class="nomargin">
+          <b>Package 2</b><br/>
+          <b>Family / Barkada Bonding</b><br/>
+Capture priceless moments with your family or closest friends.<br/>
+What's included:<br/>
+✅ 2-hour session for up to 6 people<br/>
+✅ 15 edited group and solo photos<br/>
+✅ Unlimited raw shots<br/>
+✅ Creative poses & layout options<br/>
+✅ Shared online gallery for easy access and sharing<br/>
+Rates: ₱4,000 – ₱5,000<br/>
+Home service or preferred outdoor location<br/>
+          <div class="border"></div>
+        </p>
+        <p class="nomargin">
+          <b>Package 3</b><br/>
+          <b><i>Event Coverage</i></b>
+Ideal for weddings, birthdays, debuts, baptisms, or corporate events.<br/>
+What's included:<br/>
+✅ Full-event coverage (up to 6 hours)<br/>
+✅ Unlimited raw photos<br/>
+✅ 30–50 edited highlights<br/>
+✅ Free mini teaser (up to 30 seconds) for social media<br/>
+✅ Optional add-ons:
+  <ul>
+  <li>Full video coverage</li>
+  <li>Photo booth setup</li>
+  <li>Drone shots</li>
+</ul>
+Rates: ₱8,000 – ₱15,000<br/>
+Inclusive of travel (within Metro area); additional charges may apply for out-of-town events<br/>
+
+        </p>
+        <div class="border"></div>
+      </div>
+    </div>
+    <div class="dragger_container">
+      <div class="dragger"></div>
+    </div>
+    <a class="scrollUpBtn" href="#"></a> <a class="scrollDownBtn" href="#"></a> </div>
+</article>
+<article id="popupContact" class="popupContact">
+  <div class="customScrollBox">
+    <div class="container">
+      <div class="content"> <a id="popupContactClose"><img src="images/cross.png" width="20" alt="" /></a>
+        <h1>Contact Us:</h1>
+        <p></p>
+        <form method="post">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required placeholder="Name" />
+          <label for="name">Subject:</label>
+          <input type="text" name="subject" id="subject" required placeholder="Subject" />
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required placeholder="email@example.com" />
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" required></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+        <br />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.591251070068!2d123.87855907583491!3d10.294480767896724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99c015a4bf233%3A0x95d783198f4634f8!2sCebu%20Institute%20of%20Technology%20-%20University!5e0!3m2!1sen!2sph!4v1746147943129!5m2!1sen!2sph" width="425" height="300" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="social-network"> <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a> <a href="https://www.flickr.com/" target="_blank"><img src="images/flickr.png" alt="Flicker" /></a> <a href="https://www.linkedin.com/login" target="_blank"><img src="images/linkedin.png" alt="Linkedin" /></a> <a href="https://myspace.com/" target="_blank"><img src="images/myspace.png" alt="Myspace" /></a> <a href="https://x.com/" target="_blank"><img src="images/twitter.png" alt="Twitter" /></a> </div>
+      </div>
+    </div>
+    <div class="dragger_container">
+      <div class="dragger"></div>
+    </div>
+    <a class="scrollUpBtn" href="#"></a> <a class="scrollDownBtn" href="#"></a> </div>
+</article>
+<article id="popupBlog" class="popupBlog">
+  <div class="customScrollBox">
+    <div class="container">
+      <div class="content"> <a id="popupBlogClose"><img src="images/cross.png" width="20" alt="" /></a>
+        <h1>Blog</h1>
+        <h2>Intramurals 2025</h2>
+        <div class="date"><span class="day">12</span> <span class="month">Mar</span> <span class="year">2025</span> </div>
+        <p>Capturing the Spirit of CSS Intramurals 2025: Through My Lens
+by Kristoferson S. Navarro: <br/>
+The CSS Department's intramurals this year were nothing short of unforgettable — and I had the amazing opportunity to capture it all through my lens as the official photographer.
+From the energy-filled performances of DANCEPA to the dazzling confidence of our Mr. and Ms. CSS candidates, every moment felt alive. I snapped dozens of shots, each one telling a different story of pride, preparation, and passion. The spotlight didn’t stop there — I also caught the crowd-favorite karaoke sessions, where voices soared (and sometimes cracked!) but spirits stayed high. It was wholesome, chaotic fun that brought everyone together.
+One of my favorite moments was photographing the volleyball team's practice. Their determination and team spirit were inspiring to witness. I loved how students reacted to the camera — some posed instantly, others smiled shyly, but most were just excited to be part of the moment. It reminded me how photography connects people.
+I also made sure to cover the NGE Building, where Esports battles kept the energy up for three days straight. The competition was intense, but Team LEO absolutely dominated the scene — showing skill, strategy, and pure focus.
+Overall, being the photographer gave me a front-row seat to all the action and allowed me to see how vibrant, talented, and fun the CSS community truly is. I’m proud to have frozen these moments in time — not just as a student, but as a storyteller through photos.</p>
+        <div class="border"></div>
+      </div>
+    </div>
+    <div class="dragger_container">
+      <div class="dragger"></div>
+    </div>
+    <a class="scrollUpBtn" href="#"></a> <a class="scrollDownBtn" href="#"></a> </div>
+</article>
+<script type="text/javascript" src="scripts/gallery.js"></script> 
+<script type="text/javascript" src="scripts/jquery.mCustomScrollbar.js"></script>
+</body>
+</html>
